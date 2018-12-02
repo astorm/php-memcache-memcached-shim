@@ -23,6 +23,7 @@ class Memcache {
     }
 
     public function decrement($key, $value=1) {
+        return $this->memcached->decrement($key, $value);
     }
 
     public function delete($key, $timeout=NULL) {
@@ -49,6 +50,7 @@ class Memcache {
     }
 
     public function increment($key, $value=1) {
+        return $this->memcached->increment($key, $value);
     }
 
     public function pconnect($host, $port=NULL, $timeout=NULL) {
