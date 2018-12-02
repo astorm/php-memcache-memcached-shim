@@ -26,12 +26,14 @@ class Memcache {
     }
 
     public function delete($key, $timeout=NULL) {
+        return $this->memcached->delete($key);
     }
 
     public function flush() {
     }
 
     public function get($key, &$flags=NULL) {
+        return $this->memcached->get($key);
     }
 
     public function getExtendedStats($type, $slabid=NULL, $limit=100) {
@@ -56,6 +58,7 @@ class Memcache {
     }
 
     public function set($key, $var, $flag=NULL, $expire=NULL) {
+        return $this->memcached->set($key, $var, $expire);
     }
 
     public function setCompressThreshold($threshold, $min_savings=NULL) {
